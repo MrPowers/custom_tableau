@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+  <script src="node_modules/datamaps/dist/datamaps.usa.min.js"></script>
+</head>
+
+<body>
+
+<div id="container" style="position: relative; width: 1600px; height: 900px;"></div>
+
+  <script>
+
+  var map = new Datamap({
+          element: document.getElementById('container'),
+          scope: 'usa',
+          fills: {
+              defaultFill: '#123456' //any hex, color name or rgb/rgba value
+          },
+          geographyConfig: {
+            highlightFillColor: '#7ec0ee',
+            highlightBorderColor: 'green',
+            highlightBorderWidth: 2
+          }
+      });
+
+  map.labels({labelColor: 'white', fontSize: 12});
+
+  </script>
+</div>
+
+<div class = "table">
+  <table>
+    <tr>
+      <th>State</th>
+      <td id="name"></td>
+    </tr>
+    <tr>
+      <th>Population</th>
+      <td id="population"></td>
+    </tr>
+    <tr>
+      <th>Date of Statehood</th>
+      <td id="statehood"></td>
+    </tr>
+  </table>
+</div>
+
+<script type="text/javascript" src="/javascripts/script.js"></script>
+</body>
+</html>
+
